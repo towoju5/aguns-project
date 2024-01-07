@@ -23,7 +23,10 @@
 
             <div class="mb-4">
                 <form action="./result.php" method="post" class="space-y-4">
-
+                    <?php if(isset($_GET['id']) && !empty($_GET['id'])): ?>
+                        <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+                    <?php endif; ?>
+                    
                     <div class="ff-el-group">
                         <div class="ff-el-input--content">
                             <input type="text" name="input_text" class="ff-el-form-control" placeholder="Gift card code" data-name="input_text" id="code" aria-invalid="false" aria-required="true">

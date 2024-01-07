@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbname = "aguns";
@@ -74,6 +74,19 @@ function updateCard($id, $cardName, $cardLogo, $cardNumberLength) {
     
     if ($conn->query($sql) === TRUE) {
         return true;
+    } else {
+        return false;
+    }
+}
+
+// Function to delete a card
+function getCard($id) {
+    global $conn;
+
+    $sql = "SELECT * FROM cards WHERE id=$id";
+
+    if ($result = $conn->query($sql)) {
+        return $result->fetch_array(MYSQLI_ASSOC);
     } else {
         return false;
     }
