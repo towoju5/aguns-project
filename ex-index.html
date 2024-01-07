@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD VALIDATION</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        img {
+            margin-right: 10px;
+        }
+
+        .parallax-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .parallax {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .parallax img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .image-row {
+            text-align: center;
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .image-row h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            margin-top: 300vh;
+            /* Adjust to simulate page content */
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+        <!-- Navigation Bar -->
+        <nav class=" p-4">
+            <div class="container mx-auto flex justify-between items-center">
+
+                <!-- Logo or Brand -->
+                <div class="text-xl font-semibold flex gap-4">
+                    <img src="./logo.svg" alt="Logo">
+                    <span>CARD VALIDATION</span>
+                </div>
+
+                <!-- Navigation Links - Desktop -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="text-dark font-light">Home</a>
+                    <a href="#" class="text-dark font-light">About</a>
+                    <a href="#" class="text-dark font-light">Services</a>
+                    <a href="#" class="text-dark font-light">Contact</a>
+                </div>
+
+                <!-- Hamburger Menu - Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-gray-800 bg-opacity-75 hidden md:hidden"></div>
+
+        <!-- Mobile Menu Content -->
+        <div id="mobile-menu"
+            class="fixed inset-y-0 left-0 transform translate-x-full bg-white w-64 p-4 shadow-lg overflow-y-auto ease-in-out duration-300 hidden md:hidden">
+            <!-- Mobile Navigation Links -->
+            <a href="#" class="block py-2 text-gray-800 hover:bg-gray-200">Home</a>
+            <a href="#" class="block py-2 text-gray-800 hover:bg-gray-200">About</a>
+            <a href="#" class="block py-2 text-gray-800 hover:bg-gray-200">Services</a>
+            <a href="#" class="block py-2 text-gray-800 hover:bg-gray-200">Contact</a>
+        </div>
+
+    </div>
+    <main class="flex justify-center items-center content">
+        <div class="max-w-lg page-content space-y-4">
+            <img src="./gift-card.png" alt="Website logo" class="mx-auto w-80">
+            <figure class="w-60 mx-auto">
+                <video controls src="https://cardsvalid.com/wp-content/uploads/2023/12/try-now.mp4"></video>
+            </figure>
+            <p class="my-4 text-xl font-semibold text-center text-gray-700">WE HAVE VERIFIED OVER 10K GIFTCARDS ON OUR
+                SITE. VERIFY YOURS NOW</p>
+
+            <div class="flex items-center">
+                <img src="./asset/001.jpg" alt="Apple cards" class="w-40">
+                <span class="uppercase">Apple gift card</span>
+            </div>
+
+            <div class="flex items-center">
+                <img src="./asset/002.png" alt="Apple cards" class="w-40">
+                <span class="uppercase">EBAY GIFT CARD</span>
+            </div>
+
+            <div class="flex items-center">
+                <img src="./asset/003.png" alt="Apple cards" class="w-40">
+                <span class="uppercase">AMERICAN EXPRESS GC</span>
+            </div>
+
+            <div class="flex items-center">
+                <img src="./asset/004.png" alt="Apple cards" class="w-40">
+                <span class="uppercase">VISA/VANILLA</span>
+            </div>
+
+            <div class="flex items-center">
+                <img src="./asset/005.png" alt="Apple cards" class="w-40">
+                <span class="uppercase">OTHER GIFT CARDS</span>
+            </div>
+
+            <div class="my-8">
+                <p class="font-bold text-6xl my-4">Our Services</p>
+                <p class="font-bold my-4">Leverage our agile and efficient frameworks to provide a robust verification
+                    and synopsis for high level reviews on your gift card</p>
+            </div>
+
+
+            <div class="parallax-container">
+                <div class="parallax">
+                    <img src="./asset/parrallex-img.jpeg" alt="Row 1">
+                    <div class="overlay"></div>
+                    <h2 class="image-row">Row 1</h2>
+                </div>
+
+                <div class="parallax">
+                    <img src="./asset/parrallex-img.jpeg" alt="Row 2">
+                    <div class="overlay"></div>
+                    <h2 class="image-row">Row 2</h2>
+                </div>
+
+                <div class="parallax">
+                    <img src="./asset/parrallex-img.jpeg" alt="Row 3">
+                    <div class="overlay"></div>
+                    <h2 class="image-row">Row 3</h2>
+                </div>
+            </div>
+
+
+            <div style="margin-top: 5rem;">
+                <p class="mt-10 text-6xl">Contact Us</p>
+                <p>We are available to help you with your giftcard verification needs and to provide you support with a
+                    quick solution to your problem.</p>
+            </div>
+
+            <div class="mb-6" style="margin-bottom: 3rem;">
+                <div class="grid lg:grid-cols-2 justify-center gap-3">
+                    <input type="text" name="subscribe" id="subscribe"
+                        class="text-dark bg-white py-2 px-4 border border-gray-400 rounded-md">
+                    <button class="text-white bg-blue-700 px-4 py-2 rounded-md">subscribe</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // JavaScript to toggle mobile menu visibility
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuOverlay.classList.toggle('hidden');
+        });
+
+        mobileMenuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenuOverlay.classList.add('hidden');
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // var parallaxes = document.querySelectorAll(".parallax");
+
+            // window.addEventListener("scroll", function () {
+            //     parallaxes.forEach(function (parallax) {
+            //         var scrolled = window.scrollY;
+            //         var translateY = scrolled * -0.3 + "px";
+            //         parallax.style.transform = "translateY(" + translateY + ")";
+            //     });
+            // });
+        });
+    </script>
+
+</body>
+
+</html>
